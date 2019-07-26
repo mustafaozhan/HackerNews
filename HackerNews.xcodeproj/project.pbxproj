@@ -15,6 +15,7 @@
 		5C74DA2922EA412800B7CCC7 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5C74DA2822EA412800B7CCC7 /* Preview Assets.xcassets */; };
 		5C74DA2C22EA412800B7CCC7 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 5C74DA2A22EA412800B7CCC7 /* LaunchScreen.storyboard */; };
 		5C74DA3822EA44E900B7CCC7 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C74DA3722EA44E900B7CCC7 /* MainViewModel.swift */; };
+		5C9A495E22EBA2EF00EB2DE9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A495D22EBA2EF00EB2DE9 /* Item.swift */; };
 		5CBD75C422EA45CA00190A02 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD75C322EA45CA00190A02 /* FeedType.swift */; };
 		5CBD75C622EA466700190A02 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD75C522EA466700190A02 /* IndicatorView.swift */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		5C74DA2B22EA412800B7CCC7 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		5C74DA2D22EA412800B7CCC7 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		5C74DA3722EA44E900B7CCC7 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		5C9A495D22EBA2EF00EB2DE9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/HackerNews/HackerNews/Model/Item.swift; sourceTree = "<group>"; };
 		5CBD75C322EA45CA00190A02 /* FeedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedType.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/HackerNews/HackerNews/Model/FeedType.swift; sourceTree = "<group>"; };
 		5CBD75C522EA466700190A02 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IndicatorView.swift; path = ../../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/HackerNews/HackerNews/Main/View/IndicatorView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -64,8 +66,8 @@
 		5C74DA1B22EA412800B7CCC7 /* HackerNews */ = {
 			isa = PBXGroup;
 			children = (
-				5CBD75C222EA45A400190A02 /* Model */,
 				5C74DA3522EA413F00B7CCC7 /* App */,
+				5CBD75C222EA45A400190A02 /* Model */,
 				5C74DA3422EA413700B7CCC7 /* Main */,
 				5C74DA3322EA413000B7CCC7 /* Resources */,
 			);
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				5CBD75C322EA45CA00190A02 /* FeedType.swift */,
+				5C9A495D22EBA2EF00EB2DE9 /* Item.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -202,6 +205,7 @@
 				5C74DA1D22EA412800B7CCC7 /* AppDelegate.swift in Sources */,
 				5C74DA2222EA412800B7CCC7 /* HackerNews.xcdatamodeld in Sources */,
 				5C74DA2422EA412800B7CCC7 /* MainView.swift in Sources */,
+				5C9A495E22EBA2EF00EB2DE9 /* Item.swift in Sources */,
 				5C74DA1F22EA412800B7CCC7 /* SceneDelegate.swift in Sources */,
 				5CBD75C422EA45CA00190A02 /* FeedType.swift in Sources */,
 				5CBD75C622EA466700190A02 /* IndicatorView.swift in Sources */,

@@ -9,15 +9,29 @@
 import SwiftUI
 
 struct MainView: View {
+    
+    @ObjectBinding
+    var viewModel: MainViewModel
+    
     var body: some View {
-        IndicatorView(style: .medium, color: UIColor.blue)
+        
+        NavigationView {
+            
+            VStack{
+                Text("Test")
+                
+            }.navigationBarTitle(Text("Hacker News"))
+            
+        }.onAppear(perform: {
+            self.viewModel.viewDidAppear.send(())
+        })
     }
 }
 
 #if DEBUG
 struct MainView_Previews: PreviewProvider {
     static var previews: some View {
-        MainView()
+        MainView(viewModel: MainViewModel())
     }
 }
 #endif
