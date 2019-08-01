@@ -18,6 +18,7 @@
 		5C9A495E22EBA2EF00EB2DE9 /* Item.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5C9A495D22EBA2EF00EB2DE9 /* Item.swift */; };
 		5CBD75C422EA45CA00190A02 /* FeedType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD75C322EA45CA00190A02 /* FeedType.swift */; };
 		5CBD75C622EA466700190A02 /* IndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CBD75C522EA466700190A02 /* IndicatorView.swift */; };
+		5CD9419822F2094800AB3FDF /* HackerNewsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5CD9419722F2094800AB3FDF /* HackerNewsAPI.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +35,7 @@
 		5C9A495D22EBA2EF00EB2DE9 /* Item.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Item.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/HackerNews/HackerNews/Model/Item.swift; sourceTree = "<group>"; };
 		5CBD75C322EA45CA00190A02 /* FeedType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = FeedType.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/HackerNews/HackerNews/Model/FeedType.swift; sourceTree = "<group>"; };
 		5CBD75C522EA466700190A02 /* IndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = IndicatorView.swift; path = ../../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/HackerNews/HackerNews/Main/View/IndicatorView.swift; sourceTree = "<group>"; };
+		5CD9419722F2094800AB3FDF /* HackerNewsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = HackerNewsAPI.swift; path = ../../../../../../../System/Volumes/Data/Users/mustafa.ozhan/Projects/Personal/HackerNews/HackerNews/Util/HackerNewsAPI.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -69,6 +71,7 @@
 				5C74DA3522EA413F00B7CCC7 /* App */,
 				5CBD75C222EA45A400190A02 /* Model */,
 				5C74DA3422EA413700B7CCC7 /* Main */,
+				5CD9419622F2091200AB3FDF /* Util */,
 				5C74DA3322EA413000B7CCC7 /* Resources */,
 			);
 			path = HackerNews;
@@ -128,6 +131,14 @@
 				5C9A495D22EBA2EF00EB2DE9 /* Item.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		5CD9419622F2091200AB3FDF /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				5CD9419722F2094800AB3FDF /* HackerNewsAPI.swift */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -209,6 +220,7 @@
 				5C74DA1F22EA412800B7CCC7 /* SceneDelegate.swift in Sources */,
 				5CBD75C422EA45CA00190A02 /* FeedType.swift in Sources */,
 				5CBD75C622EA466700190A02 /* IndicatorView.swift in Sources */,
+				5CD9419822F2094800AB3FDF /* HackerNewsAPI.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

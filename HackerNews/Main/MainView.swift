@@ -17,11 +17,10 @@ struct MainView: View {
         
         NavigationView {
             
-            VStack{
+            VStack {
                 Text("Test")
                 
             }.navigationBarTitle(Text("Hacker News"))
-            
         }.onAppear(perform: {
             self.viewModel.viewDidAppear.send(())
         })
@@ -29,7 +28,7 @@ struct MainView: View {
 }
 
 #if DEBUG
-struct MainView_Previews: PreviewProvider {
+struct MainViewPreviews: PreviewProvider {
     static var previews: some View {
         MainView(viewModel: MainViewModel())
     }
