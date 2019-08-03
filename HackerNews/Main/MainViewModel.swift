@@ -9,12 +9,10 @@
 import SwiftUI
 import Combine
 
-final class MainViewModel: BindableObject {
+final class MainViewModel: ObservableObject {
     let willChange = PassthroughSubject<MainViewModel, Never>()
     let viewDidAppear = PassthroughSubject<Void, Never>()
-    
     var items = [Item]() {
         didSet { willChange.send(self) }
     }
-    
 }

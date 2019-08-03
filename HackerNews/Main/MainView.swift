@@ -10,7 +10,7 @@ import SwiftUI
 
 struct MainView: View {
     
-    @ObjectBinding
+    @ObservedObject
     var viewModel: MainViewModel
     
     var body: some View {

@@ -8,9 +8,10 @@
 
 import Foundation
 import Combine
-
+// swiftlint:disable nesting
 class HackerNews {
     struct FetchFeed: Publisher {
+        
         typealias Output = [Int]
         typealias Failure = Error
         
@@ -24,7 +25,7 @@ class HackerNews {
                     url: URL(string: "https://hacker-news.firebaseio.com/v0.\(type.rawValue)stories.json")!
                 )
                 URLSession.DataTaskPublisher(request: request, session: URLSession.shared)
-                    .map{ $0.0 }
+                    .map { $0.0 }
                     .decode(type: [Int].self, decoder: JSONDecoder())
                     .receive(subscriber: subscriber)
         }
@@ -37,15 +38,16 @@ class HackerNews {
         let id: Int
         
         func receive<S>(subscriber: S) where
-            S : Subscriber,
+            S: Subscriber,
             Failure == S.Failure,
             Output == S.Input {
+            
                 let request = URLRequest(url: URL(string: "https://hacker-news.firebaseio.com/v0/item/\(id).json")!)
+            
                 URLSession.DataTaskPublisher(request: request, session: URLSession.shared)
-                .map{ $0.0 }
-                .decode(type: Item.self, decoder: JSONDecoder())
-                .receive(subscriber: subscriber)
+                    .map { $0.0 }
+                    .decode(type: Item.self, decoder: JSONDecoder())
+                    .receive(subscriber: subscriber)
         }
-        
     }
 }
