@@ -35,16 +35,21 @@ struct MainView: View {
                                     ItemView(item: item)
                             }
                         }
+                        
+                        if viewModel.hasMoreItems {
+                            IndicatorView(
+                                style: .medium,
+                                color: UIColor(named: "Primary")!
+                            ).onAppear { self.viewModel.loadMoreItems() }
+                        }
                     }
                 } else {
                     Spacer()
                 }
                 
-            }
-            .navigationBarTitle(Text("Hacker News"))
+            }.navigationBarTitle(Text("Hacker News"))
             
-        }
-        .onAppear {
+        }.onAppear {
             self.viewModel.onAppear()
         }
     }

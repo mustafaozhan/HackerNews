@@ -13,8 +13,7 @@ struct ItemView: View {
     let item: Item
     
     var body: some View {
-        VStack {
-            
+        VStack(alignment: .leading, spacing: 2) {
             if item.title != nil {
                 Text(item.title!)
                     .font(.headline)
@@ -46,8 +45,7 @@ struct ItemView: View {
                 
                 Spacer()
             }
-        }
-        .padding([.top, .bottom], 4)
+        }.padding([.top, .bottom], 4)
     }
 }
 

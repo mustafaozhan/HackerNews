@@ -21,8 +21,7 @@ struct IndicatorView: View {
                 parentSize: geometry.size,
                 size: self.$size
             )
-        }
-        .frame(height: size.height)
+        }.frame(height: size.height)
     }
     
     struct InnerView: UIViewRepresentable {
@@ -38,7 +37,10 @@ struct IndicatorView: View {
             return uiView
         }
         
-        func updateUIView(_ uiView: UIActivityIndicatorView, context _: Context) {
+        func updateUIView(
+            _ uiView: UIActivityIndicatorView,
+            context _: Context
+        ) {
             DispatchQueue.main.async {
                 self.size = uiView.sizeThatFits(self.parentSize)
             }
@@ -46,11 +48,14 @@ struct IndicatorView: View {
     }
 }
 
-//#if DEBUG
-//struct ActivityIndicatorView_Previews: PreviewProvider {
-//
-//    static var previews: some View {
-//        ActivityIndicatorView(style: style, color: color)
-//    }
-//}
-//#endif
+#if DEBUG
+struct IndicatorViewPreviews: PreviewProvider {
+    
+    static var previews: some View {
+        IndicatorView(
+            style: .medium,
+            color: UIColor(named: "Primary")!
+        )
+    }
+}
+#endif

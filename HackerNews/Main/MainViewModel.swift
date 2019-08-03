@@ -23,6 +23,8 @@ final class MainViewModel: ObservableObject {
         didSet { fetchItems(ids: feed.prefix(perPage))}
     }
     
+    var hasMoreItems: Bool { items.count < feed.count }
+    
     var feedType = FeedType.top {
         didSet {
             items.removeAll()
@@ -30,12 +32,15 @@ final class MainViewModel: ObservableObject {
         }
     }
     
-    deinit {
-        cancelable?.cancel()
-    }
+    deinit { cancelable?.cancel() }
     
-    func onAppear() {
-        fetchFeed(type: feedType)
+    func onAppear() { fetchFeed(type: feedType) }
+    
+    func loadMoreItems() {
+        fetchItems(
+            ids: feed.dropLast(items.count)
+                .prefix(perPage)
+        )
     }
     
     func fetchFeed(type: FeedType) {
