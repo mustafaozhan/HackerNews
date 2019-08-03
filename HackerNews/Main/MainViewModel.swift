@@ -15,4 +15,10 @@ final class MainViewModel: ObservableObject {
     var items = [Item]() {
         didSet { willChange.send(self) }
     }
+    var feedType = FeedType.top {
+        didSet {
+            items.removeAll()
+            
+        }
+    }
 }

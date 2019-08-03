@@ -18,12 +18,28 @@ struct MainView: View {
         NavigationView {
             
             VStack {
-                Text("Test")
                 
-            }.navigationBarTitle(Text("Hacker News"))
-        }.onAppear(perform: {
+                Picker("Options", selection: $viewModel.feedType) {
+                    ForEach(FeedType.allCases, id: \.self) { type in
+                        Text(type.rawValue.capitalized)
+                    }
+                }
+                .pickerStyle(SegmentedPickerStyle())
+                .padding([.leading, .trailing], 16)
+                
+                if !viewModel.items.isEmpty {
+                    // List Logic is here
+                } else {
+                    Spacer()
+                }
+                
+            }
+            .navigationBarTitle(Text("Hacker News"))
+            
+        }
+        .onAppear {
             self.viewModel.viewDidAppear.send(())
-        })
+        }
     }
 }
 
