@@ -30,8 +30,10 @@ struct MainView: View {
                 if !viewModel.items.isEmpty {
                     List {
                         ForEach(viewModel.items, id: \.id) { item in
-                            Text("\(item.title ?? "")")
-                            // Row view and navigation here
+                            NavigationLink(destination: WebView(url: URL(string: item.htmlUrl)!)
+                                .navigationBarTitle(Text(item.title ?? "Hacker News"))) {
+                                    ItemView(item: item)
+                            }
                         }
                     }
                 } else {
