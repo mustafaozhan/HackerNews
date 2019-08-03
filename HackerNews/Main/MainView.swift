@@ -19,7 +19,7 @@ struct MainView: View {
             
             VStack {
                 
-                Picker("Options", selection: $viewModel.feedType) {
+                Picker("Feed", selection: $viewModel.feedType) {
                     ForEach(FeedType.allCases, id: \.self) { type in
                         Text(type.rawValue.capitalized)
                     }
@@ -28,7 +28,12 @@ struct MainView: View {
                 .padding([.leading, .trailing], 16)
                 
                 if !viewModel.items.isEmpty {
-                    // List Logic is here
+                    List {
+                        ForEach(viewModel.items, id: \.id) { item in
+                            Text("\(item.title ?? "")")
+                            // Row view and navigation here
+                        }
+                    }
                 } else {
                     Spacer()
                 }
@@ -38,7 +43,7 @@ struct MainView: View {
             
         }
         .onAppear {
-            self.viewModel.viewDidAppear.send(())
+            self.viewModel.onAppear()
         }
     }
 }
